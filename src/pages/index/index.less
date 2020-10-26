@@ -1,0 +1,65 @@
+@import './fonts/iconfont.css';
+
+.homepage {
+  background: no-repeat center center;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  .home-middle {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .title {
+      font-weight: lighter;
+      color: #fff;
+      text-shadow: 0 1px 1px #595959;
+      letter-spacing: 6px;
+      padding-top: 20px;
+      font-size: 60px;
+    }
+    .desc {
+      font-weight: lighter;
+      color: #fff;
+      text-shadow: 0 1px 1px #595959;
+      letter-spacing: 6px;
+      padding-top: 20px;
+      font-size: 24px;
+    }
+    .nav {
+      margin-top: 20px;
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li {
+          color: #dedede;
+          font-size: 26px;
+          border-radius: 100%;
+          border: solid 2px rgba(210,210,210,.3);
+          display: inline-block;
+          text-align: center;
+          width: 52px;
+          height: 52px;
+          line-height: 52px;
+          margin: 0 10px;
+          transition: all ease .3s;
+          &:hover{
+            border: solid 2px #afafaf;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+.fadeIn {
+  animation-name: fadeIn;
+}
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}

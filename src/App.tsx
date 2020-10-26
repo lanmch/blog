@@ -2,11 +2,14 @@ import React from 'react';
 import './App.css';
 import Nav from './components/nav';
 import HomePage from './pages/index';
+import Catalogue from './pages/catalogue';
 function App() {
   return (
     <div className="App">
-      <Nav />
-      <HomePage />
+      {/* <Nav /> */}
+      {/* <HomePage /> */}
+      <Catalogue />
+
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

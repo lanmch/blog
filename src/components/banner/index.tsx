@@ -1,10 +1,14 @@
 import React from 'react';
 import './index.less';
-function Banner() {
+interface bannerProps {
+  title: string,
+  abstract: string
+}
+function Banner(props: bannerProps) {
   return (
     <div className="banner">
-      <h1 className="title">coding</h1>
-      <div className="desc">coding makes world better</div>
+      <h1 className="title">{ props.title }</h1>
+      <div className="desc">{ props.abstract }</div>
     </div>
   );
   

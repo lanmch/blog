@@ -3,27 +3,14 @@ import './App.css';
 import Nav from './components/nav';
 import HomePage from './pages/index';
 import Catalogue from './pages/catalogue';
+import Article from './pages/article';
 function App() {
   return (
     <div className="App">
       {/* <Nav />
       <HomePage /> */}
-      <Catalogue />
-
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+      {/* <Catalogue /> */}
+      <Article />
     </div>
   );
 }

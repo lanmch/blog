@@ -14,7 +14,10 @@ function Catalogue() {
   return (
     <div className="catalogue">
       <Header ifAtTop={ ifAtTop } />
-      <Banner />
+      <Banner
+        title="目录"
+        abstract="categroy"
+      />
       <CatalogueList />
       <Followme />
     </div>

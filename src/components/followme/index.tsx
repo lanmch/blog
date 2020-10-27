@@ -4,26 +4,23 @@ function Followme() {
   const [ifShowMyContact, changeIfShowMyContact] = useState(false);
   const [contactLogoURL, changeContactLogo] = useState(require('./images/follow.png'));
   const changeLogo = () => {
-    ifShowMyContact ? changeContactLogo(require('./images/unfollow.png')) : changeContactLogo(require('./images/follow.png'));
+    ifShowMyContact ? changeContactLogo(require('./images/follow.png')) : changeContactLogo(require('./images/unfollow.png')) ;
     changeIfShowMyContact(!ifShowMyContact);
   }
   const ContactMessageRender = (
-    <div>
-    <ul className="my-message">
-          <li className="iconfont icon-github"></li>
-          <li className="iconfont icon-gongzhonghao"></li>
-          <li className="iconfont icon-youjian"></li>
-    </ul>
-    <div className="tangle"></div>
-    </div>
+      <ul className="my-message">
+            <li className="iconfont icon-github"></li>
+            <li className="iconfont icon-gongzhonghao"></li>
+            <li className="iconfont icon-youjian"></li>
+      </ul>
   )
   return (
     <div className="followme">
       {
-        !ifShowMyContact ? ContactMessageRender : null
+        ifShowMyContact ? ContactMessageRender : null
       }
       
-      <img className="logo" onClick={ changeLogo } src={ contactLogoURL } />
+      <img className="logo" onClick={ changeLogo } src={ contactLogoURL } alt='' />
     </div>
   );
   

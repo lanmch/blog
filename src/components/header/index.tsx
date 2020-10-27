@@ -1,8 +1,17 @@
 import React from 'react';
 import './index.less';
-function Header() {
+import classnames from 'classnames';
+
+function Header(props: { ifAtTop: boolean}) {
+  const { ifAtTop } = props;
+
+  console.log(ifAtTop)
+  const headerClass = classnames({
+    "header": ifAtTop,
+    "header-scroll": !ifAtTop
+  })
   return (
-    <div className="header">
+    <div className={ headerClass }>
       <div className="header-logo">Mch</div>
       <ul className="header-nav">
         <li>首页</li>

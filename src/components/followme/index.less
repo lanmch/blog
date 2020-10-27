@@ -1,0 +1,47 @@
+@import '../../pages/index/fonts/iconfont.css';
+.followme {
+  position: fixed;
+  bottom: 0;
+  right: 5%;
+  z-index: 3;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .my-message {
+    border: 2px solid black;
+    width: 250px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 50px;
+    li {
+      font-size: 32px;
+    }
+  }
+  .tangle {
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top: 17px solid #000;
+    position: relative;
+    &::after {
+      content: '';
+      border: 6px solid transparent;
+      border-top: 10px solid #fff;
+      position: absolute;
+      top: -16px;
+      left: -6px;
+    }
+  }
+  .logo {
+    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

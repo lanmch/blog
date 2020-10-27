@@ -1,0 +1,33 @@
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 55px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #fff;
+  &-logo {
+    font-family: Futura, “Trebuchet MS”, Arial;
+    font-weight: bold;
+    font-size: 22px;
+    margin-left: 30px;
+  }
+  &-nav {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    li {
+      margin-left: 30px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      &:hover {
+        cursor: pointer;
+        color: rgb(231, 231, 231);
+      }
+    }
+  }
+}

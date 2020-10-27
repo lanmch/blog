@@ -6,8 +6,8 @@ import Catalogue from './pages/catalogue';
 function App() {
   return (
     <div className="App">
-      {/* <Nav /> */}
-      {/* <HomePage /> */}
+      {/* <Nav />
+      <HomePage /> */}
       <Catalogue />
 
       {/* <header className="App-header">

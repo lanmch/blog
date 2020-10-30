@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Klavika Bold Italic';
+  src : url('./images/klavika-bold-italic.otf');
+}
+.pigeonhole-item {
+  width: 500px;
+  .year {
+    font-family: 'Klavika Bold Italic';
+    font-size: 44px;
+    font-weight: bold;
+  }
+  .list {
+    font-size: 18px;
+    font-family: "glyph-correction","Amstelvar","Noto Serif SC",serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .list-item {
+      width: 100%;
+      line-height: 2;
+      transition: border .5s;
+      border-bottom: 1px dashed rgb(211 211 212);
+      margin-top: 1em;
+      padding-bottom: 0.5em;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      &-time {
+        color: hsl(240deg 1% 48%);
+      }
+    }
+  }
+}

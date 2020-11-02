@@ -1,13 +1,16 @@
 @font-face {
   font-family: 'Klavika Bold Italic';
-  src : url('./images/klavika-bold-italic.otf');
+  src : url('./images/CinzelDecorative-Bold.ttf');
 }
 .pigeonhole-item {
-  width: 500px;
+  width: 700px;
+  margin: 15px 0 30px 0;
   .year {
     font-family: 'Klavika Bold Italic';
     font-size: 44px;
     font-weight: bold;
+    display: flex;
+    justify-content: space-between;
   }
   .list {
     font-size: 18px;
@@ -28,6 +31,14 @@
       justify-content: space-between;
       &-time {
         color: hsl(240deg 1% 48%);
+      }
+      &:hover {
+        color: #2A6EF4;
+        border-bottom: 1px dashed #2A6EF4;
+        cursor: pointer;
+        .list-item-time {
+          color: #2A6EF4;
+        }
       }
     }
   }

@@ -25,7 +25,10 @@ function Article() {
   '***这是斜体加粗的文字***\n\n' +
   '~~这是加删除线的文字~~ \n\n'+
   '\`console.log(Hello World)\` \n\n'+
-  '```const a=2; ```'
+  '```javascript\n' +
+  'const a=2;\n' +
+  'console.log("10086");\n' +
+  '```'
 
   return (
     <div className="article">

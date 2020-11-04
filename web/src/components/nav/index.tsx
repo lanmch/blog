@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './index.less';
-import a from './images/nav.png'
+
 function Nav() {
   const [navLogoUrl, setNavLogoUrl] = useState(require('./images/nav.png'));
   const [ifShowNav, setShowNav] = useState(false);
@@ -16,17 +17,17 @@ function Nav() {
   }
   const NavItem = (
     <ul className="navigator-content">
-      <li>编程</li>
-      <li>|</li>
-      <li>摄影</li>
-      <li>|</li>
-      <li>美食</li>
-      <li>|</li>
-      <li>归档</li>
+        <li><Link to="/catalogue">目录</Link></li>
+        <li>|</li>
+        <li><Link to="/pigeonhole">归档</Link></li>
+        <li>|</li>
+        <li><Link to="/catalogue">关于</Link></li>
+        <li>|</li>
+        <li>归档</li>
     </ul>
   )
   return (
-    <div className="navigator">
+    <div className="navigator" onMouseLeave={handleMouseOutNav}>
       {
         ifShowNav ? NavItem : null
       }
@@ -35,7 +36,6 @@ function Nav() {
         src={navLogoUrl}
         className="logo"
         onMouseOver={handleMouseOverNav}
-        onMouseLeave={handleMouseOutNav}
       />
     </div>
   );

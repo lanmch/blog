@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.less';
+import Nav from '../../components/nav';
 import CSS from 'csstype';
 const backImg: CSS.Properties = {
   color: 'red',
@@ -9,6 +10,7 @@ const backImg: CSS.Properties = {
 function HomePage() {
   return (
     <div className="homepage animated fadeIn" style={ backImg }>
+      <Nav />
       <div
         className="home-middle"
         >

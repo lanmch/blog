@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './index.less';
 import classnames from 'classnames';
 
@@ -14,11 +15,11 @@ function Header(props: { ifAtTop: boolean}) {
     <div className={ headerClass }>
       <div className="header-logo">Mch</div>
       <ul className="header-nav">
-        <li>首页</li>
-        <li>技术</li>
-        <li>生活剪影</li>
-        <li>归档</li>
-        <li>关于</li>
+        <li><Link to="/">首页</Link></li>
+        <li><Link to="/catalogue">目录</Link></li>
+        <li><Link to="/">生活剪影</Link></li>
+        <li><Link to="/pigeonhole">归档</Link></li>
+        <li><Link to="/">关于</Link></li>
       </ul>
     </div>
   );

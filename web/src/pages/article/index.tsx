@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import Header from '../../components/header';
 import Banner from '../../components/banner';
 import ArticleContent from '../../components/acticle-content';
@@ -41,7 +42,9 @@ function Article() {
   'const a=2;\n' +
   'console.log("10086");\n' +
   '```'
-  const articleId = 13;
+  console.log()
+  const state: any = useLocation().state;
+  const articleId = isNaN(parseInt(state.articleId)) ? 0 : parseInt(state.articleId)
   const { articleDetail = {} } = useFetch(`http://127.0.0.1:7001/getArticleDetail?articleId=${articleId}`);
   console.log(articleDetail)
   return (

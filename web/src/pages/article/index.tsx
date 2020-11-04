@@ -4,6 +4,18 @@ import Banner from '../../components/banner';
 import ArticleContent from '../../components/acticle-content';
 import Followme from '../../components/followme';
 import './index.less';
+
+const useFetch = (url: string): any => {
+  const [data, setData] = useState({})
+  useEffect(() => {
+      fetch(url).then(async(res) => {
+        const json = await res.json();
+        setData(json);
+      })
+    }, [])
+    return data
+}
+
 function Article() {
   const [ifAtTop, setAtTop] = useState(true);
   useEffect(() => {
@@ -29,15 +41,17 @@ function Article() {
   'const a=2;\n' +
   'console.log("10086");\n' +
   '```'
-
+  const articleId = 13;
+  const { articleDetail = {} } = useFetch(`http://127.0.0.1:7001/getArticleDetail?articleId=${articleId}`);
+  console.log(articleDetail)
   return (
     <div className="article">
       <Header ifAtTop={ ifAtTop } />
       <Banner
-        title="如何一次性搞定this/apply/bind/call以及闭包箭头函数用法"
-        abstract="the difference between call, bind and apply"
+        title={ articleDetail.title }
+        abstract={ articleDetail.abstract }
         />
-      <ArticleContent article={ article }/>
+      <ArticleContent article={ articleDetail.content }/>
       <Followme />
     </div>
   );

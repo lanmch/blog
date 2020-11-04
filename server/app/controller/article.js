@@ -15,6 +15,13 @@ class ArticleController extends Controller {
     ctx.body = pigeonholeList;
     
   }
+  async getArticleDetail() {
+    const ctx = this.ctx;
+    const articleDetail = await ctx.service.article.getArticleDetail(ctx.query);
+    ctx.body = articleDetail;
+    
+  }
+  
 }
 
 module.exports = ArticleController;

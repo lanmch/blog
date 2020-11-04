@@ -4,7 +4,7 @@ class ArticleService extends Service {
     const { app } = this;
     try {
       const articleList = await app.mysql.select('article');
-
+      
       return {
         articleList,
       };
@@ -30,6 +30,19 @@ class ArticleService extends Service {
       }
       return {
         pigeonholeList: timeObj,
+      };
+    } catch (err) {
+      return null;
+    }
+  }
+
+  async getArticleDetail(params) {
+    const { app } = this;
+    const { articleId = 0 } = params;
+    try {
+      const articleDetail = await app.mysql.get('article', { articleId });
+      return {
+        articleDetail
       };
     } catch (err) {
       return null;

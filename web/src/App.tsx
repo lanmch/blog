@@ -11,8 +11,8 @@ function App() {
       {/* <Nav />
       <HomePage /> */}
       {/* <Catalogue /> */}
-      {/* <Article /> */}
-      <Pigeonhole />
+      <Article />
+      {/* <Pigeonhole /> */}
     </div>
   );
 }

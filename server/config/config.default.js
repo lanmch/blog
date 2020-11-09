@@ -28,7 +28,7 @@ module.exports = appInfo => {
       // username
       user: 'root',
       // password
-      password: 'rootroot',
+      password: 'Zachary1',
       // database
       database: 'blog',    
     },
@@ -37,7 +37,11 @@ module.exports = appInfo => {
     // load into agent, default is close
     agent: false,
   };
-
+  config.security ={
+    csrf: {
+      enable: false,
+    }
+  },
   config.cors = {
     origin: '*', // 表示允许的源
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH' // 表示允许的http请求方式

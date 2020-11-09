@@ -48,6 +48,27 @@ class ArticleService extends Service {
       return null;
     }
   }
+
+  async addArticle(params) {
+    const { title, abstract, content, cover, author } = params;
+    const { app } = this;
+    try {
+      const result = await app.mysql.insert('article', { 
+        title,
+        abstract,
+        content,
+        author,
+        type: 4
+       });
+       console.log(result)
+      return {
+        result
+      };
+    } catch (err) {
+      console.log('===', err)
+      return null;
+    }
+  }
 }
 
 module.exports = ArticleService;

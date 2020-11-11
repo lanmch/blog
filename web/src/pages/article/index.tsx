@@ -5,6 +5,7 @@ import Banner from '../../components/banner';
 import ArticleContent from '../../components/acticle-content';
 import Followme from '../../components/followme';
 import './index.less';
+import axios from 'axios';
 
 const useFetch = (url: string): any => {
   const [data, setData] = useState({})
@@ -19,6 +20,12 @@ const useFetch = (url: string): any => {
 
 function Article() {
   const [ifAtTop, setAtTop] = useState(true);
+  const [articleDetail, setArticleDetail] = useState({
+    title: '',
+    content: '',
+    abstract: '',
+    cover: ''
+  });
   useEffect(() => {
     window.addEventListener('scroll', () => {
       window.pageYOffset > 25 ? setAtTop(false) : setAtTop(true);
@@ -42,17 +49,23 @@ function Article() {
   'const a=2;\n' +
   'console.log("10086");\n' +
   '```'
-  console.log()
+
   const state: any = useLocation().state;
   const articleId = isNaN(parseInt(state.articleId)) ? 0 : parseInt(state.articleId)
-  const { articleDetail = {} } = useFetch(`http://127.0.0.1:7001/getArticleDetail?articleId=${articleId}`);
-  console.log(articleDetail)
+
+  useEffect(() => {
+    axios.get(`http://127.0.0.1:7001/getArticleDetail?articleId=${articleId}`)
+    .then(res => {
+      setArticleDetail(res.data.articleDetail)
+    })
+  }, []);
   return (
     <div className="article">
       <Header ifAtTop={ ifAtTop } />
       <Banner
         title={ articleDetail.title }
         abstract={ articleDetail.abstract }
+        cover={ articleDetail.cover }
         />
       <ArticleContent article={ articleDetail.content }/>
       <Followme />

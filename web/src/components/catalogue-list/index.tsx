@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './index.less';
+import axios from 'axios';
+import { ProgressPlugin } from 'webpack';
 
 const useFetch = (url: string): any => {
   const [data, setData] = useState({})
@@ -37,8 +39,14 @@ const formatTimeAndAuthor = (tsp: string): string => {
 
 
 function CatalogueList() {
-  const { articleList } = useFetch("http://127.0.0.1:7001/getArticleList");
-  console.log(articleList)
+  // const { articleList } = useFetch("http://127.0.0.1:7001/getArticleList");
+  const [articleList, setArticleList] = useState([]);
+  useEffect(() => {
+    axios.get("http://127.0.0.1:7001/getArticleList")
+      .then(res => {
+        setArticleList(res.data.articleList)
+      })
+  }, []);
   const history = useHistory();
   return (
     <div className="catalogue-list">

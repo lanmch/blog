@@ -3,7 +3,9 @@ class ArticleService extends Service {
   async getArticleList() {
     const { app } = this;
     try {
-      const articleList = await app.mysql.select('article');
+      const articleList = await app.mysql.select('article', {
+        orders: [['tsp','desc']]
+      });
       
       return {
         articleList,
@@ -58,14 +60,33 @@ class ArticleService extends Service {
         abstract,
         content,
         author,
-        type: 4
+        type: 4,
+        cover
        });
-       console.log(result)
       return {
         result
       };
     } catch (err) {
-      console.log('===', err)
+      return null;
+    }
+  }
+  async updateArticle(params) {
+    const { title, abstract, content, cover, author, articleId } = params;
+    const { app } = this;
+    try {
+      const result = await app.mysql.update('article', { 
+        title,
+        abstract,
+        content,
+        author,
+        type: 1,
+        cover
+       }, { where: { articleId } });
+      return {
+        result
+      };
+    } catch (err) {
+      console.log(err)
       return null;
     }
   }

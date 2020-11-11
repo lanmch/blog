@@ -68,12 +68,12 @@ function ArticleList() {
                   <IconText icon={LikeOutlined} text="156" key="list-vertical-like-o" />,
                   <IconText icon={MessageOutlined} text="2" key="list-vertical-message" />,
                 ]}
-                extra={
+                extra={ item.cover ?
                   <img
                     width={272}
                     alt="logo"
-                    src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
-                  />
+                    src={ item.cover }
+                  /> : <h5 style={{ width: 272, color: "blue" }}>暂无封面</h5>
                 }
               >
                 <List.Item.Meta

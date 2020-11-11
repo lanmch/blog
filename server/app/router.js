@@ -10,4 +10,5 @@ module.exports = app => {
   router.get('/getArticlePigeonhole', controller.article.getArticlePigeonhole);
   router.get('/getArticleDetail', controller.article.getArticleDetail);
   router.post('/addArticle', controller.article.addArticle);
+  router.post('/updateArticle', controller.article.updateArticle);
 };

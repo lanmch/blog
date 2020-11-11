@@ -26,6 +26,11 @@ class ArticleController extends Controller {
     const result = await ctx.service.article.addArticle(ctx.request.body);
     ctx.body = result;
   }
+  async updateArticle() {
+    const ctx = this.ctx;
+    const result = await ctx.service.article.updateArticle(ctx.request.body);
+    ctx.body = result;
+  }
 }
 
 module.exports = ArticleController;

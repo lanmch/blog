@@ -12,9 +12,10 @@ import {
   TagOutlined
 } from '@ant-design/icons';
 import './index.less';
-
+import Homepage from './components/index';
 import ArticleList from './components/articleList';
 import WriteArticle from './components/writeArticle';
+import ArticleType from './components/articleType';
 import './App.css';
 const { Header, Sider, Content } = Layout;
 function App() {
@@ -35,7 +36,7 @@ function App() {
             <Link to="/article-list">文章管理</Link>
             </Menu.Item>
             <Menu.Item key="3" icon={<FileImageOutlined />} >
-            <Link to="/write-article">板块封面管理</Link>
+            <Link to="/article-type">板块/封面管理</Link>
             </Menu.Item>
                 <Menu.Item key="4" icon={<TagOutlined />}>
                   标签/分类管理
@@ -57,9 +58,10 @@ function App() {
                   minHeight: 280,
                 }}
               >
-                <Route path="/" exact component={ArticleList} />
+                <Route path="/" exact component={Homepage} />
                 <Route path="/article-list" exact component={ArticleList} />
                 <Route path="/write-article" component={WriteArticle} />
+                <Route path="/article-type" component={ArticleType} />
 
               </Content>
             </Layout>

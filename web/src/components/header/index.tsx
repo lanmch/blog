@@ -17,7 +17,7 @@ function Header(props: { ifAtTop: boolean}) {
       <ul className="header-nav">
         <li><Link to="/">首页</Link></li>
         <li><Link to="/catalogue">目录</Link></li>
-        <li><Link to="/">生活剪影</Link></li>
+        <li><Link to="/photowall">生活剪影</Link></li>
         <li><Link to="/pigeonhole">归档</Link></li>
         <li><Link to="/">关于</Link></li>
       </ul>

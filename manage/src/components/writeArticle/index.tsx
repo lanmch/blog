@@ -38,7 +38,7 @@ function WriteArticle() {
     const [author, setAuthor] = useState('');
     const PubArticle = (articleId: number) => {
         console.log(articleId);
-        let url = articleId ? 'http://127.0.0.1:7001/updateArticle' : 'http://127.0.0.1:7001/addArticle'
+        let url = articleId ? 'http://119.29.174.131:7001/updateArticle' : 'http://119.29.174.131:7001/addArticle'
         // 修改文章
         let params: any = {
             title,
@@ -63,7 +63,7 @@ function WriteArticle() {
     // const articleDetail = useFetchGet(`http://127.0.0.1:7001/getArticleDetail?articleId=${articleId}`);
 
     useEffect(() => {
-        axios.get(`http://127.0.0.1:7001/getArticleDetail?articleId=${articleId}`)
+        axios.get(`http://119.29.174.131:7001/getArticleDetail?articleId=${articleId}`)
             .then(res => {
                 if (res.data.articleDetail) {
                     setTitle(res.data.articleDetail.title);

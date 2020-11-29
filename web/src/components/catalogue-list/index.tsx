@@ -42,7 +42,7 @@ function CatalogueList() {
   // const { articleList } = useFetch("http://127.0.0.1:7001/getArticleList");
   const [articleList, setArticleList] = useState([]);
   useEffect(() => {
-    axios.get("http://127.0.0.1:7001/getArticleList")
+    axios.get("http://119.29.174.131:7001/getArticleList")
       .then(res => {
         setArticleList(res.data.articleList)
       })

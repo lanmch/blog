@@ -26,7 +26,7 @@ const useFetch = (url: string): any => {
 }
 
 function PigeonholeList() {
-  const { pigeonholeList } = useFetch("http://127.0.0.1:7001/getArticlePigeonhole");
+  const { pigeonholeList } = useFetch("http://119.29.174.131:7001/getArticlePigeonhole");
   let yearArr = pigeonholeList ? Object.keys(pigeonholeList).reverse(): [];
   return (
     <div className="pigeonhole-item">

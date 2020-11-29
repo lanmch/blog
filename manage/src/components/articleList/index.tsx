@@ -34,7 +34,7 @@ const IconText = ({ icon, text }: any) => (
 );
 
 function ArticleList() {
-  const { articleList = [] } = useFetch(`http://127.0.0.1:7001/getArticleList`);
+  const { articleList = [] } = useFetch(`http://119.29.174.131:7001/getArticleList`);
   const history = useHistory();
   const editArticle = (articleId: number) => {
     history.push('/write-article', { articleId });

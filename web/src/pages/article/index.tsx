@@ -54,7 +54,7 @@ function Article() {
   const articleId = isNaN(parseInt(state.articleId)) ? 0 : parseInt(state.articleId)
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:7001/getArticleDetail?articleId=${articleId}`)
+    axios.get(`http://119.29.174.131:7001/getArticleDetail?articleId=${articleId}`)
     .then(res => {
       setArticleDetail(res.data.articleDetail)
     })

@@ -22,6 +22,7 @@ const successMessage = () => {
 const errorMessage = () => {
     message.error('发布失败~');
 };
+
 function WriteArticle() {
 
     const history = useHistory();
@@ -48,6 +49,21 @@ function WriteArticle() {
             author,
         }
         if (articleId) params = { ...params, articleId };
+        axios.defaults.headers.common['Authorization'] = 'Bearer '+ "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imxhbm1jaCIsInBhc3N3b3JkIjoibGFubWNoIiwiaWF0IjoxNjA2NzU2Mjk2LCJleHAiOjE2MDY3NTYzMjZ9.IZ0OnBd3iM8sZ3WFRtA-WCwZwS2cOEN58zR3Xklgr5g";
+        
+        
+        axios.interceptors.response.use( response => {
+            return Promise.resolve(response);
+        }, error =>{
+            switch(error.response.status){
+                case 401:
+                        // localStorage.removeItem('token')
+                        message.error('发布失败~token已过期');
+                        break;
+                default:break;
+            }
+            return Promise.reject(error);
+        })
         axios.post(url, params).then(async (res) => {
             if (res.status == 200) {
                 successMessage();

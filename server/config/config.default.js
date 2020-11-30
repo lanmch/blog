@@ -28,8 +28,8 @@ module.exports = appInfo => {
       // username
       user: 'root',
       // password
-      // password: 'Zachary1',
-      password: 'rootroot',
+      password: 'Zachary1',
+      // password: 'rootroot',
       // database
       database: 'blog',    
     },
@@ -47,6 +47,10 @@ module.exports = appInfo => {
     origin: '*', // 表示允许的源
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH' // 表示允许的http请求方式
   };
+
+  config.jwt = {
+    secret: "lanmch"
+  }
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',

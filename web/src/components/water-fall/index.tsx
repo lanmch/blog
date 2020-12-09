@@ -35,7 +35,8 @@ function WaterFall() {
   for (let i = 0; i < imgArr.length; i++) {
     let currentImgWidth = document.getElementById(`img${i}`)?.clientWidth,
     currentImgHeight = document.getElementById(`img${i}`)?.clientHeight;
-    currentImgWidth = currentImgWidth ? currentImgWidth : 250;
+    // currentImgWidth = currentImgWidth ? currentImgWidth : 250;
+    currentImgWidth = 250;
     // 第一行
     if(i < columnNum) {
       heightArr.push(currentImgHeight);
@@ -58,34 +59,41 @@ function WaterFall() {
       heightArr[index] =  minHeight + a;
     }
    }
-   console.log(itemsImgProps)
   return (
       <div
         className="waterfall"
         id="waterfall"
         style={{
-          width: "70%",
+          // width: "70%",
+          width: '1000px',
           position: "relative",
           height: `${Math.max(...heightArr)}px`,
-          overflow: "hidden"
+          overflow: "hidden",
+          marginTop: '10px'
         }}
       >
         {imgArr.map((item, index) => (
           <div
             key={index}
+            style={{
+              width: '250px',
+              position: "absolute",
+              top: `${itemsImgProps[index].top}px`,
+              left: `${itemsImgProps[index].left}px`,
+            }}
           >
             <img
               id={"img"+index}
               src={item}
               // id={"img" + index}
               style={{
-              position: "absolute",
-              top: `${itemsImgProps[index].top}px`,
-              left: `${itemsImgProps[index].left}px`,
+              // position: "absolute",
+              // top: `${itemsImgProps[index].top}px`,
+              // left: `${itemsImgProps[index].left}px`,
               // width: `${child.style.width}px`,
-              width: '25%',
-              // height: `${child.style.height}px`,
-              margin: `${10}px`,
+              // width: '23%',
+              width: '250px',
+              padding: '10px',
               boxSizing: "border-box"
             }}/>
           </div>

@@ -25,12 +25,12 @@ function PhotoWall() {
     <div className="photo-wall">
       <Header ifAtTop={ ifAtTop } />
       <Banner
-        title="好图"
-        abstract="好图记录生活"
-        cover={ articleDetail.cover }
+        title="剪影"
+        abstract="record my life with photos"
+        // cover={ articleDetail.cover }
+        cover="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607540126387&di=7de9d9837f5b4445666614ea7c7a30b9&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Fback_pic%2F05%2F55%2F79%2F465b15d957c810f.jpg"
         />
         
-        {/* <WaterFall /> */}
         <WaterFall />
 
       <Followme />

@@ -2,18 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './index.less';
 import axios from 'axios';
-import { ProgressPlugin } from 'webpack';
 
-const useFetch = (url: string): any => {
-  const [data, setData] = useState({})
-  useEffect(() => {
-      fetch(url).then(async(res) => {
-        const json = await res.json();
-        setData(json);
-      })
-    }, [])
-    return data
-}
+// const useFetch = (url: string): any => {
+//   const [data, setData] = useState({})
+//   useEffect(() => {
+//       fetch(url).then(async(res) => {
+//         const json = await res.json();
+//         setData(json);
+//       })
+//     }, [])
+//     return data
+// }
 const formatTimeAndAuthor = (tsp: string): string => {
   // xxxx-xx-xx
   let formatTsp = tsp.slice(0, 10);

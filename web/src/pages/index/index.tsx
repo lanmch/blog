@@ -16,7 +16,7 @@ function HomePage() {
         >
         <div>
           <div className="title">Mch's Blog</div>
-          <div className="desc">编程/科技/文学/摄影</div>
+          <div className="desc">编程/科技/文学/剪影</div>
           <nav className="nav">
             <ul>
               <li className="iconfont icon-github"></li>

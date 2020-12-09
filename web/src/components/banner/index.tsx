@@ -1,4 +1,3 @@
-import { url } from 'inspector';
 import React from 'react';
 import './index.less';
 interface bannerProps {
@@ -10,7 +9,8 @@ interface bannerProps {
 function Banner(props: bannerProps) {
   const backStyle = {
     background: `url('${props.cover}') no-repeat center`,
-    backgroundSize: 'cover'
+    // backgroundSize: 'cover'
+    backgroundSize: '100% 100%'
   }
   return (
     <div className="banner"

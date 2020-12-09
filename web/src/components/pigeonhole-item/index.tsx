@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './index.less';
 const yearAnimal = ['🐭', '🐮', '🐯', '🐰', '🐲', '🐍', '🐴', '🐑', '🐒', '🐔', '🐶', '🐷'];
 const getYearAnimal = (year: string | number) => {

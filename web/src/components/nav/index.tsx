@@ -21,9 +21,11 @@ function Nav() {
         <li>|</li>
         <li><Link to="/pigeonhole">归档</Link></li>
         <li>|</li>
-        <li><Link to="/catalogue">关于</Link></li>
+        <li><Link to="/catalogue">杂文</Link></li>
         <li>|</li>
-        <li>归档</li>
+        <li><Link to="/catalogue">剪影</Link></li>
+        <li>|</li>
+        <li>关于</li>
     </ul>
   )
   return (

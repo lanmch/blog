@@ -51,13 +51,10 @@ function WaterFall() {
   for (let i = 0; i < imgArr.length; i++) {
     let currentImgWidth = document.getElementById(`img${i}`)?.clientWidth,
     currentImgHeight = document.getElementById(`img${i}`)?.clientHeight;
-    console.log(`document.getElementById('img${i}')`);
-    console.log('====byid:,', `img${i}`,document.getElementById(`img${i}`));
     // currentImgWidth = currentImgWidth ? currentImgWidth : 250;
     currentImgWidth = 250;
     // 第一行
     if(i < columnNum) {
-      console.log('====1hang,', currentImgHeight);
       heightArr.push(currentImgHeight);
       itemsImgProps.push({
         top: 0,

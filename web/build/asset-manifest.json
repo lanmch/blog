@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.be37a0d8.chunk.css",
+    "main.js": "/static/js/main.77ce7bb7.chunk.js",
+    "main.js.map": "/static/js/main.77ce7bb7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a8150d41.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a8150d41.js.map",
+    "static/js/2.5580283a.chunk.js": "/static/js/2.5580283a.chunk.js",
+    "static/js/2.5580283a.chunk.js.map": "/static/js/2.5580283a.chunk.js.map",
+    "static/js/3.dbac0be1.chunk.js": "/static/js/3.dbac0be1.chunk.js",
+    "static/js/3.dbac0be1.chunk.js.map": "/static/js/3.dbac0be1.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.be37a0d8.chunk.css.map": "/static/css/main.be37a0d8.chunk.css.map",
+    "static/js/2.5580283a.chunk.js.LICENSE.txt": "/static/js/2.5580283a.chunk.js.LICENSE.txt",
+    "static/media/CinzelDecorative-Bold.ttf": "/static/media/CinzelDecorative-Bold.9678a402.ttf",
+    "static/media/Shojumaru.ttf": "/static/media/Shojumaru.ecce5634.ttf",
+    "static/media/follow.png": "/static/media/follow.90c49d58.png",
+    "static/media/iconfont.woff?t=1603786887153": "/static/media/iconfont.1771480e.woff",
+    "static/media/iconfont.ttf?t=1603786887153": "/static/media/iconfont.5cbcbf62.ttf",
+    "static/media/iconfont.eot?t=1603786887153": "/static/media/iconfont.8197875e.eot",
+    "static/media/iconfont.svg?t=1603786887153": "/static/media/iconfont.e362841a.svg",
+    "static/media/me.png": "/static/media/me.b665ef3d.png",
+    "static/media/nav-hover.png": "/static/media/nav-hover.9e953781.png",
+    "static/media/nav.png": "/static/media/nav.9577f07c.png",
+    "static/media/unfollow.png": "/static/media/unfollow.b80bb347.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a8150d41.js",
+    "static/js/2.5580283a.chunk.js",
+    "static/css/main.be37a0d8.chunk.css",
+    "static/js/main.77ce7bb7.chunk.js"
+  ]
+}

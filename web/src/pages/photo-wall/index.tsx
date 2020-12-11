@@ -7,6 +7,8 @@ import Followme from '../../components/followme';
 import './index.less';
 import axios from 'axios';
 import WaterFall from '../../components/water-fall';
+
+import { urlPrefix } from '../../utils/global';
 function PhotoWall() {
   const [ifAtTop, setAtTop] = useState(true);
   const [articleDetail, setArticleDetail] = useState({
@@ -22,7 +24,7 @@ function PhotoWall() {
       window.pageYOffset > 25 ? setAtTop(false) : setAtTop(true);
     }, false);
 
-    axios.get(`http://127.0.0.1:7001/getphoto`)
+    axios.get(`${urlPrefix}/getphoto`)
     .then(res => {
       if(res.status === 200) {
         setPhotoList(res.data);

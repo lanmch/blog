@@ -6,6 +6,7 @@ import ArticleContent from '../../components/acticle-content';
 import Followme from '../../components/followme';
 import './index.less';
 import axios from 'axios';
+import { urlPrefix } from '../../utils/global';
 
 const useFetch = (url: string): any => {
   const [data, setData] = useState({})
@@ -54,7 +55,7 @@ function Article() {
   const articleId = isNaN(parseInt(state.articleId)) ? 0 : parseInt(state.articleId)
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:7001/getArticleDetail?articleId=${articleId}`)
+    axios.get(`${urlPrefix}/getArticleDetail?articleId=${articleId}`)
     .then(res => {
       setArticleDetail(res.data.articleDetail)
     })

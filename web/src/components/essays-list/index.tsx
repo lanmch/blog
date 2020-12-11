@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import './index.less';
 import axios from 'axios';
 
+import { urlPrefix } from '../../utils/global';
 // const useFetch = (url: string): any => {
 //   const [data, setData] = useState({})
 //   useEffect(() => {
@@ -41,7 +42,7 @@ function EssaysList() {
   // const { articleList } = useFetch("http://127.0.0.1:7001/getArticleList");
   const [articleList, setArticleList] = useState([]);
   useEffect(() => {
-    axios.get("http://127.0.0.1:7001/getEssayList")
+    axios.get(`${urlPrefix}/getEssayList`)
       .then(res => {
         setArticleList(res.data.essayList)
       })

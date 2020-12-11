@@ -1,0 +1,1 @@
+export const urlPrefix = "http://www.lanmch.cn:7001";

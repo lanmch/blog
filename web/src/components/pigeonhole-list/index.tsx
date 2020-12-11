@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import PigeonholeItem from '../../components/pigeonhole-item';
 import './index.less';
+
+import { urlPrefix } from '../../utils/global';
 // const useFetch = (url: string): any => {
   
 //   const [data, setData] = useState({})
@@ -26,7 +28,7 @@ const useFetch = (url: string): any => {
 }
 
 function PigeonholeList() {
-  const { pigeonholeList } = useFetch("http://127.0.0.1:7001/getArticlePigeonhole");
+  const { pigeonholeList } = useFetch(`${urlPrefix}/getArticlePigeonhole`);
   let yearArr = pigeonholeList ? Object.keys(pigeonholeList).reverse(): [];
   return (
     <div className="pigeonhole-item">

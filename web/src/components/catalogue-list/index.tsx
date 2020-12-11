@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './index.less';
 import axios from 'axios';
-
+import { urlPrefix } from '../../utils/global';
 // const useFetch = (url: string): any => {
 //   const [data, setData] = useState({})
 //   useEffect(() => {
@@ -41,7 +41,7 @@ function CatalogueList() {
   // const { articleList } = useFetch("http://127.0.0.1:7001/getArticleList");
   const [articleList, setArticleList] = useState([]);
   useEffect(() => {
-    axios.get("http://127.0.0.1:7001/getArticleList")
+    axios.get(`${urlPrefix}/getArticleList`)
       .then(res => {
         setArticleList(res.data.articleList)
       })

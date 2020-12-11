@@ -23,10 +23,10 @@ class ArticleService extends Service {
       for(let item of pigeonholeList) {
         let year = item.tsp.toString().slice(11,15);
         if (timeObj[year]) {
-          timeObj[year].push(item);
+          timeObj[year].unshift(item);
         } else {
           timeObj[year] = [];
-          timeObj[year].push(item);
+          timeObj[year].unshift(item);
         }
 
       }

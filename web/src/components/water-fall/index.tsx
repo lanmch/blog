@@ -14,12 +14,28 @@ const imgArr = [
   'https://cdn-icare.qingtime.cn/D62BB7C2.jpg',
   'https://cdn-icare.qingtime.cn/D82F962E.jpg',
   'https://cdn-icare.qingtime.cn/B489E25C.jpg',
+  'https://cdn-icare.qingtime.cn/5A842A52.jpg','https://cdn-icare.qingtime.cn/975F1604.jpg',
+  'https://cdn-icare.qingtime.cn/7D223412.jpg',
+  'https://cdn-icare.qingtime.cn/A50DF805.jpg',
+  'https://cdn-icare.qingtime.cn/90D11455.jpg',
+  'https://cdn-icare.qingtime.cn/2A499A33.jpg',
+  'https://cdn-icare.qingtime.cn/D62BB7C2.jpg',
+  'https://cdn-icare.qingtime.cn/D82F962E.jpg',
+  'https://cdn-icare.qingtime.cn/B489E25C.jpg',
+  'https://cdn-icare.qingtime.cn/5A842A52.jpg','https://cdn-icare.qingtime.cn/975F1604.jpg',
+  'https://cdn-icare.qingtime.cn/7D223412.jpg',
+  'https://cdn-icare.qingtime.cn/A50DF805.jpg',
+  'https://cdn-icare.qingtime.cn/90D11455.jpg',
+  'https://cdn-icare.qingtime.cn/2A499A33.jpg',
+  'https://cdn-icare.qingtime.cn/D62BB7C2.jpg',
+  'https://cdn-icare.qingtime.cn/D82F962E.jpg',
+  'https://cdn-icare.qingtime.cn/B489E25C.jpg',
   'https://cdn-icare.qingtime.cn/5A842A52.jpg',
 ]
 const columnNum = 4
 function WaterFall() {
   const [itemWidth, setItemWidth] = useState();
-  
+  const [wallHeight, setWallHeight] = useState(0);
   // useEffect(() => {
   //   setItemWidth(250);
   //   window.addEventListener("resize", () => {
@@ -35,10 +51,13 @@ function WaterFall() {
   for (let i = 0; i < imgArr.length; i++) {
     let currentImgWidth = document.getElementById(`img${i}`)?.clientWidth,
     currentImgHeight = document.getElementById(`img${i}`)?.clientHeight;
+    console.log(`document.getElementById('img${i}')`);
+    console.log('====byid:,', `img${i}`,document.getElementById(`img${i}`));
     // currentImgWidth = currentImgWidth ? currentImgWidth : 250;
     currentImgWidth = 250;
     // 第一行
     if(i < columnNum) {
+      console.log('====1hang,', currentImgHeight);
       heightArr.push(currentImgHeight);
       itemsImgProps.push({
         top: 0,
@@ -67,11 +86,12 @@ function WaterFall() {
           // width: "70%",
           width: '1000px',
           position: "relative",
-          height: `${Math.max(...heightArr)}px`,
+          height: Math.max(...heightArr) ? `${Math.max(...heightArr)}px` : '70vh',
           overflow: "hidden",
           marginTop: '10px'
         }}
       >
+
         {imgArr.map((item, index) => (
           <div
             key={index}

@@ -3,9 +3,9 @@ class ArticleService extends Service {
   async getArticleList() {
     const { app } = this;
     try {
-      const articleList = await app.mysql.select('article', {
-        orders: [['tsp','desc']]
-      });
+      const articleList = await app.mysql.query(`
+        select * from article where type < 100 order by tsp desc 
+      `)
       
       return {
         articleList,
@@ -14,7 +14,23 @@ class ArticleService extends Service {
       return null;
     }
   }
-
+  async getEssayList() {
+    const { app } = this;
+    try {
+      const essayList = await app.mysql.select('article', {
+        where: { type: 100 } // id 100为其他文章
+      }, {
+        orders: [['tsp','desc']]
+      });
+      
+      return {
+        essayList,
+      };
+    } catch (err) {
+      return null;
+    }
+  }
+  
   async getArticlePigeonhole() {
     const { app } = this;
     try {

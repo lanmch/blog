@@ -8,7 +8,12 @@ class ArticleController extends Controller {
     const articleList = await ctx.service.article.getArticleList();
     ctx.body = articleList;
   }
-
+  async getEssayList() {
+    console.log('d=========')
+    const ctx = this.ctx;
+    const essayList = await ctx.service.article.getEssayList();
+    ctx.body = essayList;
+  }
   async getArticlePigeonhole() {
     const ctx = this.ctx;
     const pigeonholeList = await ctx.service.article.getArticlePigeonhole();

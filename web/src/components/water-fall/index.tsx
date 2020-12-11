@@ -1,39 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './index.less';
-import classnames from 'classnames';
-const imgArr = [
-  'https://cdn-icare.qingtime.cn/AEB82EAA.jpg',
-  'https://cdn-icare.qingtime.cn/4E70E5FD.jpg',
-  'https://cdn-icare.qingtime.cn/AAE09617.jpg',
-  'https://cdn-icare.qingtime.cn/111D757D.jpg',
-  'https://cdn-icare.qingtime.cn/975F1604.jpg',
-  'https://cdn-icare.qingtime.cn/7D223412.jpg',
-  'https://cdn-icare.qingtime.cn/A50DF805.jpg',
-  'https://cdn-icare.qingtime.cn/90D11455.jpg',
-  'https://cdn-icare.qingtime.cn/2A499A33.jpg',
-  'https://cdn-icare.qingtime.cn/D62BB7C2.jpg',
-  'https://cdn-icare.qingtime.cn/D82F962E.jpg',
-  'https://cdn-icare.qingtime.cn/B489E25C.jpg',
-  'https://cdn-icare.qingtime.cn/5A842A52.jpg','https://cdn-icare.qingtime.cn/975F1604.jpg',
-  'https://cdn-icare.qingtime.cn/7D223412.jpg',
-  'https://cdn-icare.qingtime.cn/A50DF805.jpg',
-  'https://cdn-icare.qingtime.cn/90D11455.jpg',
-  'https://cdn-icare.qingtime.cn/2A499A33.jpg',
-  'https://cdn-icare.qingtime.cn/D62BB7C2.jpg',
-  'https://cdn-icare.qingtime.cn/D82F962E.jpg',
-  'https://cdn-icare.qingtime.cn/B489E25C.jpg',
-  'https://cdn-icare.qingtime.cn/5A842A52.jpg','https://cdn-icare.qingtime.cn/975F1604.jpg',
-  'https://cdn-icare.qingtime.cn/7D223412.jpg',
-  'https://cdn-icare.qingtime.cn/A50DF805.jpg',
-  'https://cdn-icare.qingtime.cn/90D11455.jpg',
-  'https://cdn-icare.qingtime.cn/2A499A33.jpg',
-  'https://cdn-icare.qingtime.cn/D62BB7C2.jpg',
-  'https://cdn-icare.qingtime.cn/D82F962E.jpg',
-  'https://cdn-icare.qingtime.cn/B489E25C.jpg',
-  'https://cdn-icare.qingtime.cn/5A842A52.jpg',
-]
+interface photoWallProps {
+  photoList: any
+}
 const columnNum = 4
-function WaterFall() {
+function WaterFall(props: photoWallProps) {
+  const imgArr = props.photoList;
   const [itemWidth, setItemWidth] = useState();
   const [wallHeight, setWallHeight] = useState(0);
   // useEffect(() => {
@@ -89,7 +61,7 @@ function WaterFall() {
         }}
       >
 
-        {imgArr.map((item, index) => (
+        {imgArr.map((item: any, index: number) => (
           <div
             key={index}
             style={{
@@ -101,7 +73,7 @@ function WaterFall() {
           >
             <img
               id={"img"+index}
-              src={item}
+              src={item.photoUrl}
               // id={"img" + index}
               style={{
               // position: "absolute",
@@ -121,4 +93,3 @@ function WaterFall() {
 }
 
 export default WaterFall;
-

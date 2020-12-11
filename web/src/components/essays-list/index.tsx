@@ -37,13 +37,13 @@ const formatTimeAndAuthor = (tsp: string): string => {
 }
 
 
-function CatalogueList() {
+function EssaysList() {
   // const { articleList } = useFetch("http://127.0.0.1:7001/getArticleList");
   const [articleList, setArticleList] = useState([]);
   useEffect(() => {
-    axios.get("http://127.0.0.1:7001/getArticleList")
+    axios.get("http://127.0.0.1:7001/getEssayList")
       .then(res => {
-        setArticleList(res.data.articleList)
+        setArticleList(res.data.essayList)
       })
   }, []);
   const history = useHistory();
@@ -69,4 +69,4 @@ function CatalogueList() {
   
 }
 
-export default CatalogueList;
+export default EssaysList;

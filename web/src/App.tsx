@@ -6,6 +6,8 @@ import Catalogue from './pages/catalogue';
 import Article from './pages/article';
 import Pigeonhole from './pages/pigeonhole';
 import PhotoWall from './pages/photo-wall';
+import Essays from './pages/essays';
+import AboutMe from './pages/about-me';
 function App() {
   return (
     <div className="App">
@@ -15,6 +17,8 @@ function App() {
         <Route path="/catalogue" component={Catalogue} />
         <Route path="/pigeonhole" component={Pigeonhole} />
         <Route path="/photowall" component={PhotoWall} />
+        <Route path="/essays" component={Essays} />
+        <Route path="/aboutme" component={AboutMe} />
       </BrowserRouter>
     </div>
   );

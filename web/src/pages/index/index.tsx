@@ -19,9 +19,9 @@ function HomePage() {
           <div className="desc">编程/科技/文学/剪影</div>
           <nav className="nav">
             <ul>
-              <li className="iconfont icon-github"></li>
-              <li className="iconfont icon-gongzhonghao"></li>
-              <li className="iconfont icon-xiangji"></li>
+              <a href="https://github.com/lanmch"><li className="iconfont icon-github"></li></a>
+              <a href="www.lanmch.com/aboutme"><li className="iconfont icon-gongzhonghao"></li></a>
+              <a href="www.lanmch.com/aboutme"><li className="iconfont icon-xiangji"></li></a>
             </ul>
           </nav>
         </div>

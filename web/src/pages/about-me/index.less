@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Klavika Bold Italic';
+    src : url('../../components/pigeonhole-item/images/CinzelDecorative-Bold.ttf');
+}
+@font-face {
+    font-family: 'Shojumaru';
+    src : url('./imgs/Shojumaru.ttf');
+}
+.about-me {
+    height: 100vh;
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        .img {
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+        }
+        .info {
+            margin-left: 30px;
+            .name {
+                font-family: 'Shojumaru';
+                font-size: 50px;
+                margin-bottom: 20px;
+            }
+            .signature {
+                font-family: 'Shojumaru';
+                font-size: 30px;
+            }
+            .code {
+                margin-top: 30px;
+                .code-item {
+                    width: 80px;
+                    height: 80px;
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
+}

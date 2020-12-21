@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'plantc';
+    src : url('./img/plantc.woff2');
+  }
+.footer {
+    padding-bottom: 20px;
+    ul {
+        display: flex;
+        justify-content: space-around;
+        .iconfont {
+                color: #a5a5a5;
+                font-size: 26px;
+                border-radius: 100%;
+                border: solid 2px rgba(210,210,210,.3);
+                display: inline-block;
+                text-align: center;
+                width: 52px;
+                height: 52px;
+                line-height: 52px;
+                margin: 0 10px;
+                transition: all ease .3s;
+                &:hover{
+                  border: solid 2px #bdbdbd;
+                  cursor: pointer;
+                }
+        }
+    }
+    .ba {
+        // font-family: "glyph-correction","Amstelvar","Noto Serif SC",serif;
+        font-family: "plantc", serif;
+        display: flex;
+        align-items: center;
+        opacity: 0.6;
+        font-size: 12px;
+        margin-top: 20px;
+        img {
+            margin-right: 3px;
+        }
+    }
+}

@@ -53,8 +53,8 @@ function CatalogueList() {
         articleList ? articleList.map((item: any, index: number) => {
           return (
               <div className="catalogue-list-item" key={index}>
-                <h2 className="title" onClick={ ()=> { history.push(`/article`,  { articleId: item.articleId })}}>{ item.title }</h2>
-                <div className="abstract" onClick={ ()=> { history.push('/article', { articleId: item.articleId }) } }>
+                <h2 className="title" onClick={ ()=> { history.push(`/article?articleId=${item.articleId}`,  { articleId: item.articleId })}}>{ item.title }</h2>
+                <div className="abstract" onClick={ ()=> { history.push('/article?articleId=${item.articleId}', { articleId: item.articleId }) } }>
                   { item.abstract }
                 </div>
                 <div className="publish-time">Posted by { item.author? item.author : 'anonymity' } on { formatTimeAndAuthor(item.tsp) }</div>

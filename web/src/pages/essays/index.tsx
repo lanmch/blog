@@ -3,6 +3,7 @@ import Header from '../../components/header';
 import Banner from '../../components/banner';
 import EssaysList from '../../components/essays-list';
 import Followme from '../../components/followme';
+import Footer from '../../components/footer';
 import './index.less';
 function Essays() {
   const [ifAtTop, setAtTop] = useState(true);
@@ -20,6 +21,7 @@ function Essays() {
       />
       <EssaysList />
       <Followme />
+      <Footer />
     </div>
   );
 

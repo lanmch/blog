@@ -3,7 +3,8 @@ import { useLocation } from 'react-router-dom';
 import Header from '../../components/header';
 import Banner from '../../components/banner';
 import ArticleContent from '../../components/acticle-content';
-import Followme from '../../components/followme';
+// import Followme from '../../components/followme';
+import Footer from '../../components/footer';
 import './index.less';
 import axios from 'axios';
 import WaterFall from '../../components/water-fall';
@@ -44,7 +45,8 @@ function PhotoWall() {
         
         <WaterFall photoList={photoList} />
 
-      <Followme />
+      {/* <Followme /> */}
+      <Footer />
     </div>
   );
 

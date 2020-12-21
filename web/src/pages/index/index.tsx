@@ -20,8 +20,8 @@ function HomePage() {
           <nav className="nav">
             <ul>
               <a href="https://github.com/lanmch"><li className="iconfont icon-github"></li></a>
-              <a href="www.lanmch.com/aboutme"><li className="iconfont icon-gongzhonghao"></li></a>
-              <a href="www.lanmch.com/aboutme"><li className="iconfont icon-xiangji"></li></a>
+              <a href="/aboutme"><li className="iconfont icon-gongzhonghao"></li></a>
+              <a href="/aboutme"><li className="iconfont icon-xiangji"></li></a>
             </ul>
           </nav>
         </div>

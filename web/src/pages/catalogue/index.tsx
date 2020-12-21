@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Header from '../../components/header';
 import Banner from '../../components/banner';
 import CatalogueList from '../../components/catalogue-list';
-import Followme from '../../components/followme';
+// import Followme from '../../components/followme';
+import Footer from '../../components/footer';
 import './index.less';
 function Catalogue() {
   const [ifAtTop, setAtTop] = useState(true);
@@ -19,7 +20,8 @@ function Catalogue() {
         abstract="categroy"
       />
       <CatalogueList />
-      <Followme />
+      {/* <Followme /> */}
+      <Footer />
     </div>
   );
 

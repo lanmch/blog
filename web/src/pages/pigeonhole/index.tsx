@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from '../../components/header';
 import Banner from '../../components/banner';
 import PigeonholeList from '../../components/pigeonhole-list';
+import Footer from '../../components/footer';
 import './index.less';
 function Pigeonhole() {
   const [ifAtTop, setAtTop] = useState(true);
@@ -18,6 +19,7 @@ function Pigeonhole() {
         abstract=""
       />
       <PigeonholeList />
+      <Footer />
     </div>
   );
 

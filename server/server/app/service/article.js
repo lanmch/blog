@@ -34,8 +34,11 @@ class ArticleService extends Service {
   async getArticlePigeonhole() {
     const { app } = this;
     try {
-      const pigeonholeList = await app.mysql.select('article');
+      const pigeonholeList = await app.mysql.select('article', {
+        orders: [['tsp','desc']]
+      });
       let timeObj = {};
+      console.log(pigeonholeList)
       for(let item of pigeonholeList) {
         let year = item.tsp.toString().slice(11,15);
         if (timeObj[year]) {

@@ -17,8 +17,7 @@ function AboutMe() {
                 <div className="name">LanMch</div>
                 <div className="signature">just wanna be<br/>the unusual coder</div>
                 <div className="code">
-                    <img src="https://i.postimg.cc/GpVjtzkD/111111.jpg" className="code-item" />
-                    <img src="https://i.postimg.cc/GpVjtzkD/111111.jpg" className="code-item" />
+                    <img src={ require('./imgs/vxcode.png') } className="code-item" />
                 </div>
             </div>
         </div>

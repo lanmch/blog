@@ -62,7 +62,7 @@ function CatalogueList() {
                 <hr />
               </div>
           )
-        }) : null
+        }) : <img src={ require('../../assets/img/loading.gif') } className="loading" />
       }
     </div>
   );

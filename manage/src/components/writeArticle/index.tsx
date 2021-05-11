@@ -38,7 +38,6 @@ function WriteArticle() {
     const [cover, setCover] = useState('');
     const [author, setAuthor] = useState('');
     const PubArticle = (articleId: number) => {
-        console.log(articleId);
         let url = articleId ? 'http://127.0.0.1:7001/updateArticle' : 'http://127.0.0.1:7001/addArticle'
         // 修改文章
         let params: any = {

@@ -20,7 +20,7 @@ function Essays() {
         abstract="生活思考与经验复盘"
       />
       <EssaysList />
-      <Followme />
+      {/* <Followme /> */}
       <Footer />
     </div>
   );

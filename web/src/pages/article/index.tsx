@@ -42,7 +42,11 @@ function Article() {
         abstract={ articleDetail.abstract }
         cover={ articleDetail.cover }
         />
-      <ArticleContent article={ articleDetail.content }/>
+        {
+          articleDetail.content.length ? 
+          <ArticleContent article={ articleDetail.content }/> :
+          <img src={ require('../../assets/img/loading.gif') } className="loading" />
+        }
       {/* <Followme /> */}
       <Footer />
     </div>
